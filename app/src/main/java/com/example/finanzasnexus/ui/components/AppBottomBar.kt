@@ -1,7 +1,9 @@
 package com.example.finanzasnexus.ui.components
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.EventNote
 import androidx.compose.material.icons.filled.AccountBalanceWallet
+import androidx.compose.material.icons.filled.EventNote
 import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.ReceiptLong
 import androidx.compose.material.icons.filled.Schedule
@@ -31,7 +33,7 @@ fun AppBottomBar(
 
         NavigationBarItem(
             selected = currentRoute == "obligations",
-            onClick = {},
+            onClick = { onNavigate("obligations") },
             icon = { Icon(Icons.Default.ReceiptLong, null) },
             label = { Text("Obligaciones") },
             colors = colors(selectedColor, unselectedColor, background)
