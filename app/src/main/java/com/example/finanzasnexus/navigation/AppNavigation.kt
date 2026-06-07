@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.finanzasnexus.ui.screens.goals.GoalsScreen
+import com.example.finanzasnexus.ui.screens.history.HistoryScreen
 import com.example.finanzasnexus.ui.screens.home.HomeScreen
 import com.example.finanzasnexus.ui.screens.obligations.ObligationsScreen
 import com.example.finanzasnexus.ui.screens.settings.SettingsScreen
@@ -45,6 +46,17 @@ fun AppNavigation() {
                 onNavigate = { route ->
                     navController.navigate(route) {
                     launchSingleTop = true
+                    }
+                }
+            )
+        }
+
+        composable("history") {
+            HistoryScreen(
+                currentRoute = "history",
+                onNavigate = { route ->
+                    navController.navigate(route) {
+                        launchSingleTop = true
                     }
                 }
             )

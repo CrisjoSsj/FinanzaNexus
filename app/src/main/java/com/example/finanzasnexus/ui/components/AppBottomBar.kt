@@ -39,7 +39,7 @@ fun AppBottomBar(
 
         NavigationBarItem(
             selected = currentRoute == "history",
-            onClick = {},
+            onClick = { onNavigate("history") },
             icon = { Icon(Icons.Default.Schedule, null) },
             label = { Text("Historial") },
             colors = colors(selectedColor, unselectedColor, background)
