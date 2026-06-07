@@ -55,7 +55,7 @@ fun AppBottomBar(
 
         NavigationBarItem(
             selected = currentRoute == "settings",
-            onClick = {},
+            onClick = { onNavigate("settings") },
             icon = { Icon(Icons.Default.Settings, null) },
             label = { Text("Ajustes") },
             colors = colors(selectedColor, unselectedColor, background)

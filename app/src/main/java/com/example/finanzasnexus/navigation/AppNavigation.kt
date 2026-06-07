@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.finanzasnexus.ui.screens.goals.GoalsScreen
 import com.example.finanzasnexus.ui.screens.home.HomeScreen
 import com.example.finanzasnexus.ui.screens.obligations.ObligationsScreen
+import com.example.finanzasnexus.ui.screens.settings.SettingsScreen
 
 @Composable
 fun AppNavigation() {
@@ -44,6 +45,17 @@ fun AppNavigation() {
                 onNavigate = { route ->
                     navController.navigate(route) {
                     launchSingleTop = true
+                    }
+                }
+            )
+        }
+
+        composable("settings") {
+            SettingsScreen(
+                currentRoute = "settings",
+                onNavigate = { route ->
+                    navController.navigate(route) {
+                        launchSingleTop = true
                     }
                 }
             )
